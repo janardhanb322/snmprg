@@ -1,0 +1,27 @@
+body{
+    background:linear-gradient(to left,orange green);
+}
+.one{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+.input {
+    margin-top: 5%;
+}
+.one input {
+    background-color: greenyellow;
+    border-radius: 12px;
+}
+button{
+    border-radius: 15px;
+    color: black;
+    background-color: magenta;
+    box-shadow: 3px;
+}
+button:hover{
+    color: whitesmoke;
+    
+}

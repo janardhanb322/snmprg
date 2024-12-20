@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>view all notes</h1>
+    <table border="1">
+        <tr>
+            <th>notes_id</th>
+            <th>title</th>
+            <th colspan="3"></th>
+        </tr>
+        {% for i in notesdata %}
+        <tr>
+            <td>{{ i[0] }}</td>
+            <td>{{ i[1] }}</td>
+            <td>{{ i[2] }}</td>
+            <td><a href="{{url_for('readnotes',nid=i[0])}}">view</a></td>
+            <td><a href="{{url_for('updatenotes',nid=i[0])}}">update</a></td>
+            <td><a href="{{url_for('delete',nid=i[0])}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

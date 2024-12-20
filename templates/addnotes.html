@@ -1,0 +1,29 @@
+{% extends 'dashboard.html' %}
+<!-- Add Bootstrap CSS -->
+{% block addcss %}
+<link rel="stylesheet" href="{{url_for('static',filename='add.css')}}">
+<!-- <style>
+    .one{
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 10px;
+        border-color: blue;
+        width: 400px;
+    }
+</style> -->
+{% endblock %}
+
+{% block content %}
+<center>
+    <form method="post">
+        <div class="one">
+            <h1>ADD NOTES</h1><br><br>
+            <label>Enter Title</label>
+            <input type="text" name="title" placeholder="Enter your book title"> <br>
+            <label class="two">Description</label>
+            <input type="text" name='content' placeholder="Enter your Description"> <br><br>
+            <button type="submit">submit</button>
+        </div>
+    </form>
+</center>
+{% endblock %}

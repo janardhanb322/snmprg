@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>view all File</h1>
+    <table border="1">
+        <tr>
+            <th>fileid</th>
+            <th>filename</th>
+            <th>createdtime</th>
+            <th>link</th>
+        </tr>
+        {% for i in filesdata %}
+        <tr>
+            <td>{{ i[0] }}</td>
+            <td>{{ i[1] }}</td>
+            <td>{{ i[2] }}</td>
+            <td><a href="{{url_for('viewfile',fid=i[0])}}">view</a></td>
+            <td><a href="{{url_for('downloadfile',fid=i[0])}}">download</a></td>
+            <td><a href="#">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

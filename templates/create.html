@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create page</title>
+    <!-- fav icon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1024/1024824.png">
+    <script src="https://kit.fontawesome.com/b8ccc77d20.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0%;
+            box-sizing: border-box;
+            /* border: 1px solid red; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .one {
+            width: 50%;
+        }
+
+        .two {
+            width: 50%;
+        }
+
+        .two {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #formy {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .heading {
+            color: blue;
+            text-align: center;
+            font-size: 33px;
+            text-decoration: underline 2px solid goldenrod;
+            margin-top: 3px;
+        }
+
+        #formy label {
+            color: #0c7bc0;
+            font-size: 20px;
+            margin-top: 2%;
+            margin-bottom: 1%;
+        }
+
+        #formy input[type="text"],
+        [type="email"],
+        [type="Password"] {
+            padding: 1%;
+            border-radius: 10px;
+            width: 90%;
+            border: none;
+            box-shadow: 1px 2px 2px grey;
+        }
+
+        .check {
+            display: flex;
+            flex-direction: row;
+            margin: 2px;
+        }
+
+        .check p {
+            margin-left: 3%;
+        }
+
+        .btn {
+            background-color: #0c7bc0;
+            color: bisque;
+            padding: 1%;
+            border: none;
+            border-radius: 10px;
+            width: 90%;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .btn {
+            background-color: white;
+            color: #0c7bc0;
+            border: 1px solid #0c7bc0;
+
+        }
+
+        .end {
+            text-align: center;
+            margin: 2%;
+        }
+
+        .end a {
+            text-decoration: none;
+            color: #0c7bc0;
+            font-size: 20px;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<center>
+    <h3>{{ message }}</h3>
+</center>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<body>
+    <section class="main">
+        <div class="one">
+            <img src="https://cdn.dribbble.com/users/277921/screenshots/4223608/gw-dribbble.gif" width="100%" />
+        </div>
+        <div class="two">
+            <h1 class="heading">Create Account</h1>
+
+            <form method="POST" id="formy">
+                <label><i class="fa-solid fa-user"></i>username</label>
+                <input type="text" placeholder="Enter your name" name="username" required />
+                <label><i class="fa-solid fa-envelope"></i>Email</label>
+                <input type="email" placeholder="Enter your email" name="email" required />
+                <label><i class="fa-solid fa-lock"></i>Password</label>
+                <input type="password" placeholder="Your password" name="password" required />
+                <label><i class="fa-solid fa-lock"></i>Confrim-password</label>
+                <input type="password" placeholder="your conformation passsword" name="cpassword" required /> <br />
+                <div>
+                    <button type="submit" class="btn">submit</button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+</body>
+
+</html>

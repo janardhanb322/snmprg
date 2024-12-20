@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: skyblue;
+            padding: 10px;
+            border: none;
+        }
+        form{
+            border: 1px solid black;
+            padding: 50px;
+            width: 300px;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        form input,button{
+            width: 300px;
+        }
+        form input{
+            height: 30px;
+        }
+        button{
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form method="POST">
+            <h2>Login</h2>
+            <label for="username">Email</label>
+            <input type="text" name='email'>
+            <br>
+            <br>
+            <label for="password">Password</label>
+            <input type="text" name='password'>
+            <br>
+            <br>
+            <button>Login</button>
+            <br>
+            <br>
+            <a href="#">Forgot Password</a>
+        </form>
+
+    </div>
+</body>
+</html>
